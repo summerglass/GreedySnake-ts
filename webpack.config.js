@@ -8,9 +8,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    //让webpack不用箭头
+    //让webpack不用箭头,不用const，兼容老的ie
     environment: {
       arrowFunction: false,
+      const: false,
     },
   },
   //指定webpack打包的使用的模块
@@ -19,7 +20,7 @@ module.exports = {
     rules: [
       {
         //test指定规则生效的文件
-        test: /\.js/,
+        test: /\.ts$/,
         //要使用的loader.按顺序执行
         use: [
           //配置babel

@@ -1,4 +1,4 @@
-function sum() {
-  console.log("111111111111111111");
-}
-console.log("111111111111111111");
+import "./style/index.less";
+
+import GameContorl from "./moduls/GameControl";
+new GameContorl();
